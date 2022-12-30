@@ -20,7 +20,7 @@ with open("concepts_list.json", "w") as f:
     json.dump(data["concepts_list"], f, indent=4)
 
 
-liness = 'wget https://raw.githubusercontent.com/milan-oceanmtech/shell_test/main/test2.py && wget https://github.com/ShivamShrirao/diffusers/raw/main/examples/dreambooth/train_dreambooth.py && wget https://github.com/ShivamShrirao/diffusers/raw/main/scripts/convert_diffusers_to_original_stable_diffusion.py && pip install git+https://github.com/ShivamShrirao/diffusers && pip install -U --pre triton && pip install accelerate==0.12.0 transformers ftfy bitsandbytes gradio natsort &&accelerate launch train_dreambooth.py \
+liness = 'wget -q https://raw.githubusercontent.com/milan-oceanmtech/shell_test/main/test2.py && wget -q https://github.com/ShivamShrirao/diffusers/raw/main/examples/dreambooth/train_dreambooth.py && wget -q https://github.com/ShivamShrirao/diffusers/raw/main/scripts/convert_diffusers_to_original_stable_diffusion.py && pip install -q git+https://github.com/ShivamShrirao/diffusers && pip install -q -U --pre triton && pip install -q accelerate==0.12.0 transformers ftfy bitsandbytes gradio natsort &&accelerate launch train_dreambooth.py \
   --pretrained_model_name_or_path="runwayml/stable-diffusion-v1-5" \
   --pretrained_vae_name_or_path="stabilityai/sd-vae-ft-mse" \
   --output_dir="./final_modal" \
@@ -38,7 +38,7 @@ liness = 'wget https://raw.githubusercontent.com/milan-oceanmtech/shell_test/mai
   --lr_warmup_steps=0 \
   --num_class_images=50 \
   --sample_batch_size=4 \
-  --max_train_steps=100 \
+  --max_train_steps=1000 \
   --save_interval=10000 \
   --save_sample_prompt="photo of milantest" \
   --concepts_list="concepts_list.json" && python convert_diffusers_to_original_stable_diffusion.py --model_path ./final_modal/1000/  --checkpoint_path ./final_modal/1000/model.ckpt --half && python test2.py'
@@ -58,8 +58,6 @@ for x in liness.split("&&"):
         if return_code is not None:
             print('RETURN CODE', return_code)
             # Process has finished, read rest of the output 
-            for output in process.stdout.readlines():
-                print(output.strip())
             break
 
 
@@ -81,3 +79,4 @@ for x in os.listdir("./final_images"):
     response = requests.request("POST", url, headers=headers, data=payload, files=files)
 
     print(response.json())
+
