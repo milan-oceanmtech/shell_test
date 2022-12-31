@@ -3,6 +3,7 @@ import requests
 import json
 import os ,shlex
 import uuid
+import time
 
 os.mkdir("/workspace/class/")
 os.mkdir("/workspace/images/")
@@ -53,6 +54,7 @@ for x in liness.split("&&"):
     while True:
         output = process.stdout.readline()
         print(output.strip())
+        time.sleep(1)
         # Do something else
         return_code = process.poll()
         if return_code is not None:
