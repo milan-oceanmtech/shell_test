@@ -17,7 +17,7 @@ g_cuda.manual_seed(seed)
 
 prompt = "Portrait of milantest, freckles, curly middle part haircut, curly hair, middle part hairstyle, smiling kindly, wearing a bowtie and sweater vest, intricate, elegant, glowing lights, highly detailed, digital painting, artstation, concept art, smooth, sharp focus, illustration, art by wlop, mars ravelo and greg rutkowski"
 negative_prompt = ""
-num_samples = 10
+num_samples = 5
 guidance_scale = 13
 num_inference_steps = 50
 height = 512
