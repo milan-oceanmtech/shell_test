@@ -8,7 +8,7 @@ os.mkdir("/workspace/class/")
 os.mkdir("/workspace/images/")
 os.mkdir("/workspace/final_images/")
 
-data = requests.get("https://daf0-2401-4900-1f3e-414-5cc0-6e3b-500f-9a41.in.ngrok.io/get_task").json()
+data = requests.get("https://ffe0-2401-4900-1f3e-414-557e-c80e-3105-4d4c.in.ngrok.io/get_task").json()
 
 for x in data["images"]:
     f = open('/workspace/images/'+x.split("/")[-1],'wb')
@@ -68,7 +68,7 @@ import requests
 
 for x in os.listdir("./final_images"):
 
-    url = "https://daf0-2401-4900-1f3e-414-5cc0-6e3b-500f-9a41.in.ngrok.io/upload"
+    url = "https://ffe0-2401-4900-1f3e-414-557e-c80e-3105-4d4c.in.ngrok.io/upload"
 
     payload={}
     files=[
