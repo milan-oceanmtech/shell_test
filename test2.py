@@ -3,7 +3,7 @@ import uuid
 from torch import autocast
 from diffusers import StableDiffusionPipeline, DDIMScheduler
 
-model_path = "./final_modal/1000/"             # If you want to use previously trained model saved in gdrive, replace this with the full path of model in gdrive
+model_path = "./final_modal/100/"             # If you want to use previously trained model saved in gdrive, replace this with the full path of model in gdrive
 
 scheduler = DDIMScheduler(beta_start=0.00085, beta_end=0.012, beta_schedule="scaled_linear", clip_sample=False, set_alpha_to_one=False)
 pipe = StableDiffusionPipeline.from_pretrained(model_path, scheduler=scheduler, safety_checker=None, torch_dtype=torch.float16).to("cuda")
