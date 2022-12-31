@@ -38,10 +38,10 @@ liness = 'wget -q https://raw.githubusercontent.com/milan-oceanmtech/shell_test/
   --lr_warmup_steps=0 \
   --num_class_images=50 \
   --sample_batch_size=4 \
-  --max_train_steps=100 \
+  --max_train_steps=800 \
   --save_interval=10000 \
   --save_sample_prompt="photo of milantest" \
-  --concepts_list="concepts_list.json" && python convert_diffusers_to_original_stable_diffusion.py --model_path ./final_modal/100/  --checkpoint_path ./final_modal/100/model.ckpt --half && python test2.py'
+  --concepts_list="concepts_list.json" && python convert_diffusers_to_original_stable_diffusion.py --model_path ./final_modal/800/  --checkpoint_path ./final_modal/800/model.ckpt --half && python test2.py'
 for x in liness.split("&&"):
     comads = shlex.split(x)
 
