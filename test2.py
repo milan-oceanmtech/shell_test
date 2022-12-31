@@ -12,14 +12,14 @@ pipe = StableDiffusionPipeline.from_pretrained(model_path, scheduler=scheduler, 
 g_cuda = None
 
 g_cuda = torch.Generator(device='cuda')
-seed = 52362
+seed = 99
 g_cuda.manual_seed(seed)
 
 prompt = "Portrait of milantest , hyperdetailed portrait of a stunningly beautiful european boy with short hair androgynous guard made of iridescent metals shiny gems, bright nimbus, thin golden necklace, inspired by ross tran and wlop and masamune shirow and kuvshinov, concept art, intricate, photorealistic, octane render, rtx, hdr, unreal engine, dnd digital art by artgerm"
 negative_prompt = ""
 num_samples = 4
-guidance_scale = 7.5
-num_inference_steps = 50
+guidance_scale = 18
+num_inference_steps = 70
 height = 512
 width = 512
 
